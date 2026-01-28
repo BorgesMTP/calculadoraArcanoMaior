@@ -12,6 +12,7 @@
     padding: 2dvh;
     border-radius: 1em;
     margin: 2dvh auto 5dvh;
+    justify-content: center;
 }
 
 .arcano {
@@ -23,7 +24,28 @@
 .resultTitle {
     font-family: var(--fonte-titulos);
     color: var(--destaque);
+    font-size: 3em;
+    margin-bottom: .25em;
+}
+
+.arcanoName {
+    font-family: var(--fonte-texto);
+    font-weight: 600;
     font-size: 2em;
-    text-align: center;
-    margin-bottom: .5em;
-}   
+    margin-bottom: .25em;
+}
+
+.resultSubTitle {
+    font-family: var(--fonte-titulos);
+    color: var(--destaque);
+    font-size: 2em;
+    margin-bottom: .25em;
+}
+
+.arcanoSignificado {
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: .25em;
+}
+
