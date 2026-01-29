@@ -13,12 +13,12 @@
         <h1>Calculadora de Arcano Anual</h1>
 
         <label for="dataNasc">Data De Nascimento:</label>
-        <small id="dataNascError" class="errorMessage"></small>
         <input type="date" id="dataNasc" />
 
         <label for="dataAtual">Ano Atual:</label>
-        <small id="dataAtualError" class="errorMessage"></small>
         <input type="number" id="dataAtual" disabled />
+
+        <small id="dataError" class="errorMessage"></small>
 
         <button type="submit" onclick="calcular()">Calcular</button>
       </section>
@@ -30,7 +30,7 @@
           </h2>
           <p id="arcanoName" class="arcanoName"></p>
           <h3 id="resultSubTitle" class="resultSubTitle">O que significa?</h3>
-          <p id="arcanoSignificado"></p>
+          <p id="arcanoSignificado" class="arcanoSignificado"></p>
         </section>
       </section>
     </main>

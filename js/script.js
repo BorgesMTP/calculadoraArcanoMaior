@@ -2,32 +2,36 @@ const dataAtual = document.getElementById("dataAtual");
 dataAtual.value = new Date().getFullYear();
 document.getElementById("ano").textContent = dataAtual.value;
 
+document.addEventListener("submit", calcular);
+
 function calcular() {
     const dataNasc = document.getElementById("dataNasc").value;
     const dataAtual = document.getElementById("dataAtual").value;
+    const dataError = document.getElementById("dataError");
 
     if (!dataNasc || !dataAtual) {
-        alert("Por favor, preencha todos os campos.");
+        dataError.textContent = "Por favor, preencha todos os campos.";
         return;
     } else {
+        dataError.textContent = "";
 
-    let dataNascFormatada = dataNasc.split("-");
+        let dataNascFormatada = dataNasc.split("-");
     
-    let somaDataNascAno = parseInt(dataNascFormatada[0]) + parseInt(dataNascFormatada[1]) + parseInt(dataNascFormatada[2]) + parseInt(dataAtual);
+        let somaDataNascAno = parseInt(dataNascFormatada[0]) + parseInt(dataNascFormatada[1]) + parseInt(dataNascFormatada[2]) + parseInt(dataAtual);
     
-    while (somaDataNascAno > 22) {
-        let digitos = somaDataNascAno.toString().split('');
+        while (somaDataNascAno > 22) {
+            let digitos = somaDataNascAno.toString().split('');
         
-        let novaSoma = 0;
+            let novaSoma = 0;
         
-        for (let i = 0; i < digitos.length; i++) {
-            novaSoma += parseInt(digitos[i]);
+            for (let i = 0; i < digitos.length; i++) {
+                novaSoma += parseInt(digitos[i]);
+            }
+            somaDataNascAno = novaSoma;
         }
-        somaDataNascAno = novaSoma;
-    }
     
-    showResult(somaDataNascAno);
-    return;
+        showResult(somaDataNascAno);
+        return;
     }
 }
 
