@@ -12,12 +12,13 @@
     padding: 2%;
     border-radius: 1em;
     margin: 2% auto 5%;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 2%;
+    box-sizing: border-box;
 }
 
 .arcano {
     height: 50vh;
-    padding-right: 5%;
     border-radius: 1em;
 }
 
@@ -49,3 +50,19 @@
     margin-bottom: .25em;
 }
 
+@media (max-width: 1024px) {
+    .result.show{
+        flex-direction: column;
+        width: 80vw;
+        margin: 2% auto 5%;
+        padding: 1em;
+        border-radius: 1em;
+        gap: 1em;
+    }
+    .arcano {
+        height: 100%;
+        width: auto;
+        border-radius: 1em;
+    }
+
+}
