@@ -1,15 +1,13 @@
-const dataAtual = document.getElementById("dataAtual");
-dataAtual.value = new Date().getFullYear();
-document.getElementById("ano").textContent = dataAtual.value;
+const dataAtual = new Date().getFullYear();
+document.getElementById("ano").textContent = dataAtual;
 
 document.addEventListener("submit", calcular);
 
 function calcular() {
     const dataNasc = document.getElementById("dataNasc").value;
-    const dataAtual = document.getElementById("dataAtual").value;
     const dataError = document.getElementById("dataError");
 
-    if (!dataNasc || !dataAtual) {
+    if (!dataNasc) {
         dataError.textContent = "Por favor, preencha todos os campos.";
         return;
     } else {
